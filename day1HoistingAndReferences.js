@@ -15,16 +15,19 @@ console.log('I expect myFirstVariable to be 8',myFirstVariable);
 // I'll get you started with another obvious example, then I'll start leaving you more on your own:
 // 1. What is the value of mySecondVar before we declare it? Can you explain why to your partner?
 var mySeondVar;
+console.log('I expect mySeondVar to be undefined',mySeondVar);
 
 mySecondVar = 1;
 // 2. What is the value of mySecondVar now?
+console.log('I expect mySecondVar to be 1',mySecondVar);
 mySeondVar = 2;
 // 3. And what is it now?
+console.log('I expect mySeondVar to be 1,mySeondVar);
 
 
 // 1. What is the value of myThirdVar?
   // Uncomment the following line, and fill in what you expect myThirdVar to be. 
-  // console.log('I expect myThirdVar to be YOUR ANSWER HERE:',myThirdVar);
+  console.log('I expect myThirdVar to be undefined',myThirdVar);
 
 // Ok, now you should be pretty comfortable with the main takeaway from hoisting: don't try to use variables before you define them for the first time, because they'll just be undefined, not anything useful!
 
@@ -35,7 +38,7 @@ myBike.color = 'pink';
 
 var bikeCopy = myBike;
 // What would we expect bikeCopy.color to be?
-
+console.log('I expect bikeCopy.color to be pink',bikeCopy.color);
 bikeCopy.brand = 'Public';
 // What would we expect bikeCopy.brand to be?
 // What would we expect myBike.brand to be? Can you explain why to your pair?
@@ -45,6 +48,9 @@ var sparklyBikeMechanic = function(inputBike) {
 };
 
 sparklyBikeMechanic(bikeCopy);
+
+console.log('I expect bikeCopy.sparklerCount to be 2',bikeCopy.sparklerCount);
+console.log('I expect myBike.sparklerCount to be undefined',myBike.sparklerCount);
 // What do we expect bikeCopy.sparklerCount to be?
 // What do we expect myBike.sparklerCount to be? Again, take a minute here to explain why to your pair. My explanation would go something like this: 
   // Objects are passed by reference. That is, when you store them into a variable, what you're actually storing is just a reference to where that object sits in memory. So when we set bikeCopy = myBike, what we're actually doing is setting bikeCopy equal to the REFERENCE that myBike holds that points to where the object sits in memory. 
